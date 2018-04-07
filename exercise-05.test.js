@@ -3,7 +3,7 @@ console.log = mockConsole;
 
 const exercise05 = require('./exercise-05');
 
-describe('Exercise 4', function() {
+describe('Exercise 5', function() {
   test('forecast is defined correctly', function() {
     expect(exercise05.forecast).toBeDefined();
   });
