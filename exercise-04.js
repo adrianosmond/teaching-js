@@ -11,6 +11,9 @@
  * Conditionals in JavaScript are built around the if, else if and else
  * keywords: https://www.javascript.com/learn/javascript/conditionals
  * 
+ * You might also need to read about logical and comparison operators here:
+ * https://www.w3schools.com/js/js_comparisons.asp
+ * 
  * This time I have given you an empty function called forecast, which takes
  * a parameter called temperature. The purpose of this function is to tell
  * a user what the weather is like based on the temperature that is passed
