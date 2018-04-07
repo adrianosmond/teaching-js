@@ -1,31 +1,56 @@
 /**
- * EXERCISE 04 :: CONDITIONALS
+ * EXERCISE 04 :: FUNCTIONS ii
  * 
- * So far, everything we've done has been very definite but life is rarely so
- * certain. Often the answer to a question is different depending on some 
- * circumstances. In programming we can use conditionals to handle such cases.
- * Conditionals rely on a third data type. So far we've learned about strings
- * and numbers but conditionals use booleans, which are true or false:
- * https://www.javascript.com/learn/javascript/booleans
+ * No new techniques to learn this time, just a bit more practice with
+ * functions. Actually, I will cover One more thing... 
  * 
- * Conditionals in JavaScript are built around the if, else if and else
- * keywords: https://www.javascript.com/learn/javascript/conditionals
+ * You can pass almost anything in as a parameter to a function, including
+ * another function, and you can do that as many times as you want. 
+ * If you do that, it'll first work out what the inner function returns 
+ * and then pass that value the outer function. I'll explain this
+ * inception-like madness with an example that will hopefully clear up
+ * what I'm talking aobut. You could do this if you wanted:
  * 
- * You might also need to read about logical and comparison operators here:
- * https://www.w3schools.com/js/js_comparisons.asp
+ * sum(1, sum(2, sum(3, 4)))
  * 
- * This time I have given you an empty function called forecast, which takes
- * a parameter called temperature. The purpose of this function is to tell
- * a user what the weather is like based on the temperature that is passed
- * to it. Complete this function so that it returns a different string
- * depending on that temperature. If the temperature is less than 10, return
- * "It's cold", if the temperature is between 10 and 20, return "It's normal"
- * and if the temperature is more than 20, return "It's hot"
+ * First the computer will deal with the innermost function, which is 
  * 
- * 👇 Write code in the function below 👇
+ * sum(3, 4)
+ * 
+ * That will return 7, so then it will get to work on the next function,
+ * which is effectively now:
+ * 
+ * sum(2, 7)
+ * 
+ * That will return 9. so finally it can work on the outermost function:
+ * 
+ * sum(1, 9)
+ * 
+ * and that will return 10.
+ * 
+ * Hopefully this is kinda logical and not too mind blowing?!
+ * 
+ * Below I have created an empty function called squareAndSum. This
+ * function takes a number as a parameter, and should return the sum of
+ * the number and its square. So if the number was 3, it should return
+ * 12, as 3 squared is 9 and if you add 3 to 9, you get 12.
+ * 
+ * You could write this like so:
+ * 
+ * return number + (number * number)
+ * 
+ * but lets reuse some code instead. In exercise 3 we made some functions,
+ * including sum and product. I've imported them into this program for you,
+ * so you can use the code you've already written to do the addition and
+ * the multiplication. You're welcome!
+ * 
+ * 👇 Ignore the line beginning with const, that's me importing your code...
+ *    Write code in the function below that line 👇
  **/
 
-function forecast(temperature) {
+const { sum, product } = require("./exercise-03");
+
+function squareAndSum(number) {
 
 }
 
@@ -44,5 +69,5 @@ function forecast(temperature) {
  */
 
 module.exports = {
-  forecast: typeof(forecast) !== "undefined" ? forecast : undefined,
+  squareAndSum: typeof(squareAndSum) !== "undefined" ? squareAndSum : undefined,
 };

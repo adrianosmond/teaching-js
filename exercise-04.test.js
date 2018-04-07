@@ -1,40 +1,37 @@
 const mockConsole = jest.fn();
 console.log = mockConsole;
 
+const exercise03 = require('./exercise-03');
+
+jest.spyOn(exercise03, 'sum');
+jest.spyOn(exercise03, 'product');
+
 const exercise04 = require('./exercise-04');
 
 describe('Exercise 4', function() {
-  test('forecast is defined correctly', function() {
-    expect(exercise04.forecast).toBeDefined();
+  test('squareAndSum is defined correctly', function() {
+    expect(exercise04.squareAndSum).toBeDefined();
   });
 
-  test('forecast takes 1 number as a parameter', function() {
-    expect(exercise04.forecast.length).toBe(1);
+  test('squareAndSum takes 1 number as a parameter', function() {
+    expect(exercise04.squareAndSum.length).toBe(1);
   });
   
-  test('forecast works for low temperatures', function() {
-    const lowTemperatures = [-100, -1, 0, 5, 7.5, 9, 9.9];
-
-    lowTemperatures.forEach((temp) => {
-      expect(exercise04.forecast(temp)).toBe("It's cold");
-    })
+  test('squareAndSum works', function() {
+    expect(exercise04.squareAndSum(1)).toBe(2);
+    expect(exercise04.squareAndSum(2)).toBe(6);
+    expect(exercise04.squareAndSum(3)).toBe(12);
+    expect(exercise04.squareAndSum(4)).toBe(20);
+    expect(exercise04.squareAndSum(10)).toBe(110);
   });
-  
-  test('forecast works for normal temperatures', function() {
-    const normalTemperatures = [10, 11.1111, 14, 17, 19, 19.9];
 
-    normalTemperatures.forEach((temp) => {
-      expect(exercise04.forecast(temp)).toBe("It's normal");
-    })
-  });
-  
-  test('forecast works for high temperatures', function() {
-    const highTemperatures = [20.1, 21, 30, 50, 100];
-
-    highTemperatures.forEach((temp) => {
-      expect(exercise04.forecast(temp)).toBe("It's hot");
-    })
-  });
+  test('we used the code from exercise 03', function() {
+    exercise03.sum.mockReset();
+    exercise03.product.mockReset();
+    exercise04.squareAndSum(1);
+    expect(exercise03.sum.mock.calls.length).toBe(1);
+    expect(exercise03.product.mock.calls.length).toBe(1);
+  })
     
   test('no console logs left behind!', () => {
     expect(mockConsole.mock.calls.length).toBe(0);
