@@ -3,8 +3,8 @@
  * 
  * If you think back to the code you wrote in exercise 2, it wasn't very
  * reusable. Perhaps you would need to calculate the sum of two sets of
- * numbers. Using the techniques we've learneed so far we would have
- * to copy and paste the code and change the variable names. Maube that
+ * numbers. Using the techniques we've learned so far we would have
+ * to copy and paste the code and change the variable names. Maybe that
  * wouldn't be such a bad thing to do twice, but what if you needed to do
  * it 100 times. 
  * 
