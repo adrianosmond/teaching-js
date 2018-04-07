@@ -8,7 +8,7 @@
  * course. The first is: npm start [FILENAME]. This file is exercise-01.js,
  * so you can run the code you write in this file by typing the command:
  * 
- * npm run exercise-01
+ * npm start exercise-01
  * 
  * into your terminal (you don't need to put the .js on the end, although you
  * can if you want to.)
@@ -24,7 +24,7 @@
  * red message telling you what went wrong.
  * 
  * For this intro exercise we're going to use console.log() to print messages into
- * your terminal. Things you put inbetween the brackets will get put on the screen
+ * your terminal. Things you put in between the brackets will get put on the screen
  * so you can use it like so:
  * 
  * console.log("Hello world!")
