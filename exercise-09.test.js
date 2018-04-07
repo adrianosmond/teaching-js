@@ -36,4 +36,7 @@ describe('Exercise 9', function() {
     expect(exercise09.powerOf(100, 5)).toBe(10000000000);
   });
   
+  test('no console logs left behind!', () => {
+    expect(mockConsole.mock.calls.length).toBe(0);
+  });
 })

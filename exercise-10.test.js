@@ -31,4 +31,8 @@ describe('Exercise 10', function() {
   test('arraySum works with zeros', function() {
     expect(exercise10.arraySum([0, 0, 0, 0])).toBe(0);
   });
+
+  test('no console logs left behind!', () => {
+    expect(mockConsole.mock.calls.length).toBe(0);
+  });
 })

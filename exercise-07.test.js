@@ -23,7 +23,7 @@ describe('Exercise 7', function() {
   test('arrays works for "boolean"', function() {
     expect(exercise07.arrays("boolean")).toEqual([true, false]);
   });
-    
+
   test('no console logs left behind!', () => {
     expect(mockConsole.mock.calls.length).toBe(0);
   });
