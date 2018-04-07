@@ -3,7 +3,7 @@ console.log = mockConsole;
 
 const exercise03 = require('./exercise-03');
 
-describe('Exercise 2', function() {
+describe('Exercise 3', function() {
   test('sum is defined correctly', function() {
     expect(exercise03.sum).toBeDefined();
   });
