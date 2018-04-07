@@ -1,25 +1,25 @@
 /**
  * EXERCISE 09 :: LOOPS ii
  * 
- * Now we're going try combining loops and arrays.
+ * In Maths, there is the concept of powers. X to the power of y is x multiplied
+ * by itself y times, so 2 to the power of 4 is 2 times 2 times 2 times 2 = 16.
  * 
- * This time your task is to write a function called arraySum which receives an
- * array of numbers as a parameter and should return the sum of the numbers
- * in that array. so arraySum([1,2,3]) should return 6, arraySum([2,2,2,2])
- * should return 8 and arraySum([]) should return 0.
+ * Write a function called powerOf which takes 2 parameters: a number and a
+ * number to raise it to the power of, and returns the number raised to the
+ * power of the other. e.g.
  * 
- * I've written the first and last lines of the function for you. You just
- * have to do the rest!
+ * powerOf(2, 4)
+ * 
+ * should return 16.
+ * 
+ * I won't be testing negative powers, but I will test numbers to the power of 0.
+ * Any number when raised to the power of 0 is 1.
  * 
  * 👇 Write code in the function below 👇
  **/
 
-function arraySum(numbers) {
-  var sum = 0
-
-  //Your code goes here!
-
-  return sum
+function powerOf(number, power) {
+  
 }
 
 /**
@@ -37,5 +37,5 @@ function arraySum(numbers) {
  */
 
 module.exports = {
-  arraySum: typeof(arraySum) !== "undefined" ? arraySum : undefined,
+  powerOf: typeof(powerOf) !== "undefined" ? powerOf : undefined,
 };

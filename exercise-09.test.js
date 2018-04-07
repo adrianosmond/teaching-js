@@ -4,31 +4,36 @@ console.log = mockConsole;
 const exercise09 = require('./exercise-09');
 
 describe('Exercise 9', function() {
-  test('arraySum is defined correctly', function() {
-    expect(exercise09.arraySum).toBeDefined();
+  test('powerOf is defined correctly', function() {
+    expect(exercise09.powerOf).toBeDefined();
   });
 
-  test('arraySum takes 1 number as a parameter', function() {
-    expect(exercise09.arraySum.length).toBe(1);
+  test('powerOf takes 2 numbers as parameters', function() {
+    expect(exercise09.powerOf.length).toBe(2);
   });
   
-  test('arraySum works with an empty array', function() {
-    expect(exercise09.arraySum([])).toBe(0);
+  test('powerOf works to the power of 0', function() {
+    expect(exercise09.powerOf(2, 0)).toBe(1);
+    expect(exercise09.powerOf(6, 0)).toBe(1);
+    expect(exercise09.powerOf(100, 0)).toBe(1);
   });
   
-  test('arraySum works with 1 number', function() {
-    expect(exercise09.arraySum([1])).toBe(1);
+  test('powerOf works to the power of 1', function() {
+    expect(exercise09.powerOf(2, 1)).toBe(2);
+    expect(exercise09.powerOf(6, 1)).toBe(6);
+    expect(exercise09.powerOf(100, 1)).toBe(100);
   });
   
-  test('arraySum works with several numbers', function() {
-    expect(exercise09.arraySum([1,2,3,4,5,6,7,8,9,10])).toBe(55);
+  test('powerOf works to the power of 2', function() {
+    expect(exercise09.powerOf(2, 2)).toBe(4);
+    expect(exercise09.powerOf(6, 2)).toBe(36);
+    expect(exercise09.powerOf(100, 2)).toBe(10000);
   });
   
-  test('arraySum works with negative numbers', function() {
-    expect(exercise09.arraySum([-1,-2,-3])).toBe(-6);
+  test('powerOf works to the power of 5', function() {
+    expect(exercise09.powerOf(2, 5)).toBe(32);
+    expect(exercise09.powerOf(6, 5)).toBe(7776);
+    expect(exercise09.powerOf(100, 5)).toBe(10000000000);
   });
   
-  test('arraySum works with zeros', function() {
-    expect(exercise09.arraySum([0, 0, 0, 0])).toBe(0);
-  });
 })
